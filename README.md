@@ -16,3 +16,11 @@ A from-scratch implementation of **Support Vector Machines (SVM)** using quadrat
 ## 🧠 Background
 
 An SVM finds the optimal hyperplane `w·x + b = 0` that separates two classes with the maximum margin. This is solved through the **dual formulation**:
+$$
+\begin{aligned}
+\text{maximize} \quad & \sum_i \alpha_i - \tfrac{1}{2}\sum_i\sum_j \alpha_i \alpha_j y_i y_j (x_i \cdot x_j) \\
+\text{subject to} \quad & \sum_i \alpha_i y_i = 0 \\
+& \alpha_i \ge 0 && \text{(hard margin)} \\
+& 0 \le \alpha_i \le C && \text{(soft margin)}
+\end{aligned}
+$$
